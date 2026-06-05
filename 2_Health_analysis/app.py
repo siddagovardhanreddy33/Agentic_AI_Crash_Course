@@ -80,7 +80,6 @@ Based on the blood work analysis below , write:
 Do not include any other sections in the dite plan
 
 Blood Work Analysis : {extracted_values}
-
 """
 
         with st.spinner("Generating health summary and diet plan..."):
