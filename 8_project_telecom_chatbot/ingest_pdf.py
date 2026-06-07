@@ -6,10 +6,19 @@ Run once (or after regenerating the PDF): python ingest_pdf.py
 import os
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 
+
+
+
+
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
+
+
+
+
+
 
 CHROMA_DIR = "chroma_store"
 COLLECTION = "guides"

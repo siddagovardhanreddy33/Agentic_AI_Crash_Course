@@ -7,6 +7,9 @@ from rag_chain import build_chain
 
 load_dotenv()
 
+groq_key = st.secrets["GROQ_API_KEY"]
+
+
 SAMPLE_QUESTIONS = [
     "Why is my mobile internet so slow?",
     "My calls keep dropping — what should I do?",

@@ -2,6 +2,9 @@
 Ingests data/faq.csv into the 'faq' Chroma collection.
 Run once (or whenever the CSV changes): python ingest_faq.py
 """
+
+
+
 import os
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 import pandas as pd
@@ -9,10 +12,17 @@ from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
+
+
+
+
+
 CHROMA_DIR = "chroma_store"
 COLLECTION  = "faq"
 CSV_PATH    = os.path.join("data", "faq.csv")
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+
+
 
 
 def load_faq_documents(csv_path: str) -> list[Document]:
@@ -25,6 +35,10 @@ def load_faq_documents(csv_path: str) -> list[Document]:
             metadata={"source": "faq", "category": row["category"], "faq_id": str(row["id"])},
         ))
     return docs
+
+
+
+
 
 
 def main():
